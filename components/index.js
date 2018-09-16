@@ -1,17 +1,16 @@
 import React from 'react';
-import { Text } from 'react-native';
-import { connect } from 'react-redux';
+import { createStackNavigator } from 'react-navigation';
 
-const MainRouteComp = (props) => (
-  <Text>Main Page {props.username}</Text>
-);
+import HomeScreen from './home/Home';
+import AppRoute from './app';
 
-const mapStateToProps = (state) => {
-  return {
-    username: state.username
+const MainRoute = createStackNavigator({
+  First: {
+    screen: HomeScreen
+  },
+  App: {
+    screen: AppRoute
   }
-}
-
-const MainRoute = connect(mapStateToProps)(MainRouteComp);
+});
 
 export default MainRoute;
