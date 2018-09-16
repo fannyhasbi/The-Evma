@@ -6,7 +6,10 @@ import DashboardScreen from './dashboard/Dashboard';
 
 const AppRoute = createDrawerNavigator({
   Dashboard: {
-    screen: DashboardScreen
+    screen: DashboardScreen,
+    navigationOptions: {
+      title: 'Dashboard'
+    }
   }
 });
 
