@@ -1,8 +1,8 @@
 import React from 'react';
 import { Text } from 'react-native';
 
-const Home = () => (
-  <Text>Fanny Hasbi</Text>
+const HomeScreen = () => (
+  <Text>Welcome to Evma!</Text>
 );
 
-export default Home;
+export default HomeScreen;
