@@ -1,11 +1,16 @@
 import React from 'react';
-import { View, Text, Button } from 'react-native';
-import { createDrawerNavigator } from 'react-navigation';
+import { createStackNavigator } from 'react-navigation';
 
-import HomeScreen from './home/index';
+import HomeScreen from './home/Home';
+import AppRoute from './app';
 
-export default MainRoute = createDrawerNavigator({
-  Home: {
+const MainRoute = createStackNavigator({
+  First: {
     screen: HomeScreen
+  },
+  App: {
+    screen: AppRoute
   }
 });
+
+export default MainRoute;
