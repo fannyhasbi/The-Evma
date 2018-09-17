@@ -1,9 +1,11 @@
 import React from 'react';
-import { View } from 'react-native';
+import { StatusBar } from 'react-native';
 import { createDrawerNavigator } from 'react-navigation';
 
+StatusBar.setHidden(true);
+
 import DashboardScreen from './dashboard/index';
-import ConfirmationScreen from './cnfirmation/index';
+import ConfirmationScreen from './confirmation/index';
 import ScannerScreen from './scanner/index';
 import ProfileScreen from './profile/index';
 

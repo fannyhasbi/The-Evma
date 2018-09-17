@@ -1,23 +1,58 @@
 import React from 'react';
-import { View, Text, Button, StyleSheet } from 'react-native';
+import { StatusBar, StyleSheet } from 'react-native';
+import { Container, Header, Content, Button, Text, Left, Right, Body, Title } from 'native-base';
 
 class DashboardScreen extends React.Component {
+  constructor(props) {
+    super(props);
+  
+    this.state = {
+      isLoad: false
+    };
+  }
+
+  async componentWillMount() {
+    await Expo.Font.loadAsync({
+      'Roboto': require('native-base/Fonts/Roboto.ttf'),
+      'Roboto_medium': require('native-base/Fonts/Roboto_medium.ttf'),
+    });
+
+    this.setState({ isLoad: true });
+  }
+
   render(){
+    if(!this.state.isLoad){
+      return <Text>Waiting...</Text>
+    }
+
     return (
-      <View style={styles.container}>
-        <Text>Ini dashboard</Text>
-        <Button
-          title="Konfirmasi"
-          onPress={() => this.props.navigation.navigate('Confirmation')}
-        />
-      </View>
+      <Container>
+        <Header>
+          <Left />
+          <Body>
+            <Title>Dashboard</Title>
+          </Body>
+          <Right />
+        </Header>
+        <Content contentContainerStyle={styles.container}>
+          <Text>This is Dashboard Screen</Text>
+          <Button
+            block
+            success
+            style={styles.container}
+          >
+            <Text>Confirm Registrants</Text>
+          </Button>
+        </Content>
+      </Container>
     );
   }
 }
 
 const styles = StyleSheet.create({
   container: {
-    paddingTop: 20
+    alignItems: 'center',
+    justifyContent: 'center'
   }
 });
 

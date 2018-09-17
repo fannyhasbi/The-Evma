@@ -1,4 +1,6 @@
 {
+  "name": "evma",
+  "displayName": "evma",
   "expo": {
     "sdkVersion": "27.0.0"
   }
