@@ -8,7 +8,7 @@ class DashboardScreen extends React.Component {
         <Text>Ini dashboard</Text>
         <Button
           title="Konfirmasi"
-          onPress={() => this.props.navigation.navigate('Konfirmasi')}
+          onPress={() => this.props.navigation.navigate('Confirmation')}
         />
       </View>
     );

@@ -3,7 +3,7 @@ import { View } from 'react-native';
 import { createDrawerNavigator } from 'react-navigation';
 
 import DashboardScreen from './dashboard/index';
-import KonfirmasiScreen from './konfirmasi/index';
+import ConfirmationScreen from './cnfirmation/index';
 import ScannerScreen from './scanner/index';
 import ProfileScreen from './profile/index';
 
@@ -14,10 +14,10 @@ const AppRoute = createDrawerNavigator({
       title: 'Dashboard'
     }
   },
-  Konfirmasi: {
-    screen: KonfirmasiScreen,
+  Confirmation: {
+    screen: ConfirmationScreen,
     navigationOptions: {
-      title: 'Konfirmasi'
+      title: 'Confirmation'
     }
   },
   Scanner: {
